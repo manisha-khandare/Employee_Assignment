@@ -45,10 +45,10 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, intentData: Intent?) {
         super.onActivityResult(requestCode, resultCode, intentData)
 
-       /* if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
-            intentData?.getStringExtra(NewWordActivity.EXTRA_REPLY)?.let { reply ->
+        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
+            intentData?.getStringExtra(NewEmployeeActivity.EXTRA_REPLY)?.let { reply ->
                 val word = Employee(reply)
-                wordViewModel.insert(word)
+                employeeViewModel.insert(word)
             }
         } else {
             Toast.makeText(
@@ -56,6 +56,6 @@ class MainActivity : AppCompatActivity() {
                 R.string.empty_not_saved,
                 Toast.LENGTH_LONG
             ).show()
-        }*/
+        }
     }
 }
